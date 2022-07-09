@@ -13,9 +13,10 @@
     padding: 5% 18% 0 0;
 }
 
-.repertoire h1 {
+.title {
     font-size: 2.5rem;
     color: white;
+    font-family: "Oswald", sans-serif;
 }
 
 .repertoire .tabs {

@@ -8,7 +8,12 @@ export default function Navbar() {
     return (
         <div className={styles.navbar}>
             <div className={styles.title}>
-                <Image className={styles.logo} src={logo} />
+                <Image
+                    className={styles.logo}
+                    src={logo}
+                    width={520}
+                    height={100}
+                />
                 <div className={styles.social} />
                 {/*               <a href="https://www.instagram.com/joaquimfont/">
                     <i className="fa-brands fa-instagram"></i>

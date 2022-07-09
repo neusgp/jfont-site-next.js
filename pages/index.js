@@ -26,12 +26,17 @@ export default function Home() {
         }
     }, [asPath]);
     return (
-        <div>
-            <Navbar />
-            <Welcome />
-            <Bio />
-            <Media />
-            <Repertoire />
-        </div>
+        <>
+            <Head>
+                <title>JOAQUIM FONT</title>
+            </Head>
+            <div>
+                <Navbar />
+                <Welcome />
+                <Bio />
+                <Media />
+                <Repertoire />
+            </div>
+        </>
     );
 }
