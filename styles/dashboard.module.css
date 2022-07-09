@@ -1,0 +1,63 @@
+#dashboard {
+    margin: 0.8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-end;
+}
+
+#dashboard .tabs {
+    display: flex;
+    margin-left: 3%;
+}
+
+#dashboard h1 {
+    margin: 0;
+}
+#dashboard p {
+    margin: 0 2% 0 2%;
+    font-family: "Nunito", sans-serif;
+}
+#dashboard .tabs p:hover {
+    cursor: pointer;
+}
+
+#dashboard forms {
+    display: flex;
+    flex-direction: column;
+}
+
+#dashboard form {
+    margin-left: 10%;
+    margin-top: 3%;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+#dashboard select {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    width: 10%;
+    font-size: 100%;
+}
+
+#dashboard input {
+    font-family: "Nunito", sans-serif;
+    font-size: 100%;
+    width: 40%;
+    height: 2.5em;
+}
+
+#dashboard form p {
+    margin: 2% 0 0.5% 0;
+}
+
+button {
+    display: block;
+    margin-top: 2%;
+}

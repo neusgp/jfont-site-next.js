@@ -1,0 +1,34 @@
+.repertoire {
+    /* height: 50%; */
+    background-image: url("../public/repertoire.jpg");
+    height: 50rem; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    font-family: "Nunito", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5% 18% 0 0;
+}
+
+.repertoire h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.repertoire .tabs {
+    display: flex;
+    justify-content: right;
+    width: 20%;
+}
+
+.tabs p {
+    margin: 0 5px 0 5px;
+    font-size: 1.3rem;
+}
+
+.tabs p:hover {
+    cursor: pointer;
+}

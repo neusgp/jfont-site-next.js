@@ -1,0 +1,45 @@
+.navbar {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: auto;
+    font-family: "Nunito", sans-serif;
+
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.logo {
+    display: flex;
+    width: 30%;
+    margin-left: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.social {
+    margin-left: 0.8rem;
+    padding-top: 1.5%;
+}
+
+/* .social a {
+    margin: 5% 1% 0 2%;
+} */
+
+/* i {
+    font-size: 2em;
+} */
+
+.menu {
+    display: flex;
+    align-self: flex-start;
+    justify-self: right;
+    margin-right: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.8rem 0 0.8rem;
+    font-size: 140%;
+}
