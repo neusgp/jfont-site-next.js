@@ -5,6 +5,12 @@ html {
     scroll-behavior: smooth;
 }
 
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
 body {
     margin: 0;
     font-family: "Nunito", sans-serif;
