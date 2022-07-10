@@ -1,8 +1,8 @@
 import styles from "../styles/media.module.css";
-/* import ImageGallery from "react-image-gallery"; */
-/* import "react-image-gallery/styles/scss/image-gallery.scss"; */
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
-/* const images = [
+const images = [
     {
         original:
             "https://joaquimfont.s3.eu-central-1.amazonaws.com/JOAQUIM+F.+17.jpg",
@@ -35,18 +35,18 @@ import styles from "../styles/media.module.css";
         original:
             "https://joaquimfont.s3.eu-central-1.amazonaws.com/Joaquim53.jpg",
     },
-]; */
+];
 
 export default function Media() {
     return (
         <div id="media" className={styles.media}>
             <div className={styles.gallery}>
-                {/* <ImageGallery
+                <ImageGallery
                     items={images}
                     slideDuration={1200}
                     slideInterval={6000}
                     autoPlay={true}
-                /> */}
+                />
             </div>
         </div>
     );
