@@ -1,4 +1,4 @@
-#contact {
+.contact {
     font-family: "Nunito", sans-serif;
     color: white;
     background-color: black;
@@ -8,11 +8,11 @@
     padding: 5%;
 }
 
-#contact h1 {
+.title {
     color: white;
 }
 
-#contact form {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +20,7 @@
     margin-top: 4%;
     margin-bottom: 4%;
 }
-#contact input {
+.input {
     font-family: "Nunito", sans-serif;
     width: 100%;
     height: 3em;
@@ -31,7 +31,7 @@
     font-size: 100%;
 }
 
-textarea {
+.textarea {
     font-family: "Nunito", sans-serif;
     width: 100%;
     height: 3em;
@@ -49,7 +49,7 @@ textarea {
     resize: none; /*remove the resize handle on the bottom right*/
 }
 
-#contact button {
+.button {
     font-family: "Nunito", sans-serif;
     font-size: 1.2em;
     width: 30%;

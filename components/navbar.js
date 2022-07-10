@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Link from "next/link";
+
 import Image from "next/image";
 import styles from "../styles/navbar.module.css";
 import logo from "../public/joaquimfont.png";
@@ -28,18 +28,21 @@ export default function Navbar() {
                 </a> */}
             </div>
             <div className={styles.menu}>
-                <Link href="#bio">
-                    <a className={styles.link}>Bio</a>
-                </Link>
-                <Link href="#repertoire">
-                    <a className={styles.link}>Repertoire</a>
-                </Link>
-                <Link href="#agenda">
-                    <a className={styles.link}>Agenda</a>
-                </Link>
-                <Link href="#contact">
-                    <a className={styles.link}>Contact</a>
-                </Link>
+                <a href="#bio" className={styles.link}>
+                    Bio
+                </a>
+
+                <a href="#repertoire" className={styles.link}>
+                    Repertoire
+                </a>
+
+                <a href="#agenda" className={styles.link}>
+                    Agenda
+                </a>
+
+                <a href="#contact" className={styles.link}>
+                    Contact
+                </a>
             </div>
         </div>
     );
