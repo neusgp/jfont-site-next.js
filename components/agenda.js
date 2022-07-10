@@ -4,22 +4,21 @@ import moment from "moment";
 import styles from "../styles/agenda.module.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
-/* moment.locale("en-GB"); */
+moment.locale("en-GB");
 
-export default function Agenda() {
-    const [eventsList, setEventList] = useState([]);
+export default function Agenda({ props }) {
+    console.log("props", props);
     const localizer = momentLocalizer(moment);
-    useEffect(() => {});
 
     return (
         <div id="agenda" className={styles.agenda}>
             <h1 className={styles.title}>AGENDA</h1>
             <div className={styles.events}>
-                <NextEvents />
+                <NextEvents props={props} />
                 <div className={styles.calendar}>
                     <Calendar
                         localizer={localizer}
-                        events={eventsList}
+                        /* events={eventsList} */
                         startAccessor="start"
                         endAccessor="end"
                     />
@@ -29,11 +28,23 @@ export default function Agenda() {
     );
 }
 
-function NextEvents() {
+function NextEvents({ props }) {
+    const [events, setEvents] = useState(props);
     return (
-        <div className={styles.nextevents}>
+        <div id="nextevents" className={styles.nextevents}>
             <h2 className={styles.h2}>NEXT EVENTS</h2>
-            <p>(list)</p>
+            {events.map((event) => {
+                return (
+                    <div key={event.id} className={styles.event}>
+                        <p>{event.title}</p>
+                        <p>{event.date}</p>
+                        <p>{event.time}</p>
+                        <p>{event.location}</p>
+                        <p>{event.description}</p>
+                        <p>{event.url}</p>
+                    </div>
+                );
+            })}
         </div>
     );
 }

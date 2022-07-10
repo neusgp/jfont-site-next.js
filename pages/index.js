@@ -1,6 +1,7 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
+/* import { useRouter } from "next/router"; */
 import { useEffect } from "react";
+import { PrismaClient } from "@prisma/client";
 
 import Welcome from "../components/welcome.js";
 import Bio from "../components/bio.js";
@@ -11,24 +12,23 @@ import Agenda from "../components/agenda.js";
 import Footer from "../components/footer.js";
 import Contact from "../components/contact.js";
 
-export default function Home() {
-    /* const { pathname } = useRouter(); */
-
-    useEffect(() => {
-        console.log(location.hash);
-        /* 
-            if (hash === "") {
-                window.scrollTo(0, 0);
-            } else {
-                setTimeout(() => {
-                    const id = (hash || "").replace("#", "");
-                    const element = document.getElementById(id);
-                    if (element) {
-                        element.scrollIntoView({ behavior: "smooth" });
-                    }
-                }, 0);
-            } */
+export async function getServerSideProps() {
+    const prisma = new PrismaClient();
+    const events = await prisma.agenda.findMany({
+        orderBy: {
+            date: "desc",
+        },
     });
+    return {
+        props: {
+            initialEvents: events,
+        },
+    };
+}
+
+export default function Home({ initialEvents }) {
+    console.log(initialEvents);
+
     return (
         <>
             <Head>
@@ -40,7 +40,7 @@ export default function Home() {
                 <Bio />
                 <Media />
                 <Repertoire />
-                <Agenda />
+                <Agenda props={initialEvents} />
                 <Contact />
                 <Footer />
             </div>
