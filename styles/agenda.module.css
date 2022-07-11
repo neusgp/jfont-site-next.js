@@ -8,7 +8,6 @@
 }
 .title {
     color: #847f7a;
-    
 }
 
 .events {
@@ -22,10 +21,36 @@
 }
 .calendar {
     margin-top: 2%;
-    width: 100%;
+    width: 80%;
     height: 95%;
 }
+.event {
+    display: flex;
+    margin-bottom: 5%;
+}
 
-/* .event {
+.datetime {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-right: 3%;
+    border-right: 2px solid #847f7a;
+    padding-right: 3%;
+}
 
-} */
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.eventtitle {
+    font-family: "Oswald", sans-serif;
+    color: #847f7a;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.p {
+    margin: 2% 0 2% 0;
+}

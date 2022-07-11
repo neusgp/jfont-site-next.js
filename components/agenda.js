@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import styles from "../styles/agenda.module.css";
@@ -39,14 +39,18 @@ function NextEvents({ props }) {
             {events.map((event) => {
                 return (
                     <div key={event.id} className={styles.event}>
-                        <p>{event.title}</p>
-                        <p>{event.start}</p>
-                        <p>{event.time}</p>
-                        <p>{event.location}</p>
-                        <p>{event.description}</p>
-                        <p>
-                            <a href={event.url}>{event.url}</a>
-                        </p>
+                        <div className={styles.datetime}>
+                            <p className={styles.p}>{event.start}</p>
+                            <p className={styles.p}>{event.time}h</p>
+                        </div>
+                        <div className={styles.info}>
+                            <p className={styles.eventtitle}>{event.title}</p>
+                            <p className={styles.p}>{event.description}</p>
+                            <p className={styles.p}>{event.location}</p>
+                            <a className={styles.p} href={event.url}>
+                                {event.url}
+                            </a>
+                        </div>
                     </div>
                 );
             })}
