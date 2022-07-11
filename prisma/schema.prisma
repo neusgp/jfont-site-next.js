@@ -22,7 +22,8 @@ model repertori {
 model agenda {
   id   Int                   @id @default(autoincrement())
   title String
-  date String
+  start String
+  end String
   time String
   location String
   description String

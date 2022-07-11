@@ -16,7 +16,7 @@ export async function getServerSideProps() {
     const prisma = new PrismaClient();
     const events = await prisma.agenda.findMany({
         orderBy: {
-            date: "desc",
+            start: "desc",
         },
     });
     return {

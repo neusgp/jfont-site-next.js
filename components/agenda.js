@@ -7,8 +7,8 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 moment.locale("en-GB");
 
 export default function Agenda({ props }) {
-    console.log("props", props);
     const localizer = momentLocalizer(moment);
+    console.log("events list ready to put into calendar", props);
 
     return (
         <div id="agenda" className={styles.agenda}>
@@ -18,7 +18,9 @@ export default function Agenda({ props }) {
                 <div className={styles.calendar}>
                     <Calendar
                         localizer={localizer}
-                        /* events={eventsList} */
+                        events={props}
+                        view="month"
+                        views={["month"]}
                         startAccessor="start"
                         endAccessor="end"
                     />
@@ -30,6 +32,7 @@ export default function Agenda({ props }) {
 
 function NextEvents({ props }) {
     const [events, setEvents] = useState(props);
+    console.log(events);
     return (
         <div id="nextevents" className={styles.nextevents}>
             <h2 className={styles.h2}>NEXT EVENTS</h2>
@@ -37,11 +40,13 @@ function NextEvents({ props }) {
                 return (
                     <div key={event.id} className={styles.event}>
                         <p>{event.title}</p>
-                        <p>{event.date}</p>
+                        <p>{event.start}</p>
                         <p>{event.time}</p>
                         <p>{event.location}</p>
                         <p>{event.description}</p>
-                        <p>{event.url}</p>
+                        <p>
+                            <a href={event.url}>{event.url}</a>
+                        </p>
                     </div>
                 );
             })}
