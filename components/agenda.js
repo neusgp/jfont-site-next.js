@@ -19,7 +19,7 @@ export default function Agenda({ props }) {
                     <Calendar
                         localizer={localizer}
                         events={props}
-                        view="month"
+                        onView="month"
                         views={["month"]}
                         startAccessor="start"
                         endAccessor="end"
@@ -35,7 +35,6 @@ function NextEvents({ props }) {
     console.log(events);
     return (
         <div id="nextevents" className={styles.nextevents}>
-            <h2 className={styles.h2}>NEXT EVENTS</h2>
             {events.map((event) => {
                 return (
                     <div key={event.id} className={styles.event}>
@@ -46,10 +45,10 @@ function NextEvents({ props }) {
                         <div className={styles.info}>
                             <p className={styles.eventtitle}>{event.title}</p>
                             <p className={styles.p}>{event.description}</p>
-                            <p className={styles.p}>{event.location}</p>
-                            <a className={styles.p} href={event.url}>
-                                {event.url}
-                            </a>
+                            <p>{event.location}</p>
+                            <p className={styles.p}>
+                                <a href={event.url}>{event.url}</a>
+                            </p>
                         </div>
                     </div>
                 );

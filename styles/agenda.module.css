@@ -17,12 +17,16 @@
     height: 95%;
 }
 .nextevents {
-    width: 60%;
+    width: 70%;
+    height: 80%;
+    margin-right: 8%;
+    margin-top: 4%;
+    overflow: scroll;
 }
 .calendar {
     margin-top: 2%;
     width: 80%;
-    height: 95%;
+    height: 80%;
 }
 .event {
     display: flex;
@@ -32,6 +36,7 @@
 .datetime {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-end;
     margin-right: 3%;
@@ -42,6 +47,7 @@
 .info {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .eventtitle {
