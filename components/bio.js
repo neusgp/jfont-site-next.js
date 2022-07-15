@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/bio.module.css";
 
 export default function Bio() {

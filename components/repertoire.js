@@ -1,9 +1,22 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import styles from "../styles/repertoire.module.css";
 
-export default function Repertoire() {
-    const [data, setData] = useState(null);
+export async function getServerSideProps() {
+    const prisma = new PrismaClient();
+    const works = await prisma.repertori.findMany();
+
+    return {
+        props: {
+            initialWorks: works,
+        },
+    };
+}
+
+export default function Repertoire({ initialWorks }) {
     const [tab, setTab] = useState(1);
+
+    console.log(initialWorks);
 
     const changeTab = (e) => {
         console.log(e.target.id);
@@ -14,21 +27,6 @@ export default function Repertoire() {
         setTab(1);
     };
 
-    useEffect(() => {
-        let abort = false;
-
-        if (tab === 1) {
-            //fetch request to db --> SOLOIST
-            setData(/* db rows */);
-            return;
-        }
-        //fetch request to db --> OPERA
-
-        return () => {
-            abort = true;
-            setData(/* db rows */);
-        };
-    }, [tab]);
     return (
         <div id="repertoire" className={styles.repertoire}>
             <h1 className={styles.title}>REPERTOIRE</h1>
@@ -41,7 +39,6 @@ export default function Repertoire() {
                     OPERA
                 </p>
                 {/* <p onClick="">CHAMBER MUSIC</p> */}
-                <List props={data} />
             </div>
         </div>
     );

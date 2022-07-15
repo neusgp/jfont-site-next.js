@@ -4,7 +4,7 @@ CREATE TABLE "repertori" (
     "genre" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "composer" TEXT NOT NULL,
-    "place_year" TEXT NOT NULL,
+    "place_year" VARCHAR NOT NULL,
 
     CONSTRAINT "repertori_pkey" PRIMARY KEY ("id")
 );

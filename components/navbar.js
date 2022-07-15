@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-
+import React from "react";
 import Image from "next/image";
 import styles from "../styles/navbar.module.css";
 import logo from "../public/joaquimfont.png";

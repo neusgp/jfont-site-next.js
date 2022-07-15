@@ -1,13 +1,12 @@
+import React from "react";
 import { useState } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
-import styles from "../styles/agenda.module.css";
-import "react-big-calendar/lib/css/react-big-calendar.css";
 
-moment.locale("en-GB");
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+
+import styles from "../styles/agenda.module.css";
 
 export default function Agenda({ props }) {
-    const localizer = momentLocalizer(moment);
     console.log("events list ready to put into calendar", props);
 
     return (
@@ -16,13 +15,10 @@ export default function Agenda({ props }) {
             <div className={styles.events}>
                 <NextEvents props={props} />
                 <div className={styles.calendar}>
-                    <Calendar
-                        localizer={localizer}
+                    <FullCalendar
                         events={props}
-                        onView="month"
-                        views={["month"]}
-                        startAccessor="start"
-                        endAccessor="end"
+                        plugins={[dayGridPlugin]}
+                        initialView="dayGridMonth"
                     />
                 </div>
             </div>

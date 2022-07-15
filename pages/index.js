@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 /* import { useRouter } from "next/router"; */
 import { useEffect } from "react";
@@ -19,6 +20,7 @@ export async function getServerSideProps() {
             start: "desc",
         },
     });
+
     return {
         props: {
             initialEvents: events,
