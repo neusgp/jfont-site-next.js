@@ -2,30 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import styles from "../styles/repertoire.module.css";
 
-export async function getServerSideProps() {
-    const prisma = new PrismaClient();
-    const works = await prisma.repertori.findMany();
-
-    return {
-        props: {
-            initialWorks: works,
-        },
-    };
-}
-
-export default function Repertoire({ initialWorks }) {
-    const [tab, setTab] = useState(1);
-
-    console.log(initialWorks);
+export default function Repertoire({ solo, opera }) {
+    console.log("repertoire props", solo, opera);
+    const [tab, setTab] = useState();
 
     const changeTab = (e) => {
         console.log(e.target.id);
-        if (e.target.id === 2) {
+        if (e.target.id == 2) {
             setTab(2);
             return;
         }
         setTab(1);
     };
+
+    console.log("tab", tab);
 
     return (
         <div id="repertoire" className={styles.repertoire}>
@@ -40,8 +30,40 @@ export default function Repertoire({ initialWorks }) {
                 </p>
                 {/* <p onClick="">CHAMBER MUSIC</p> */}
             </div>
+            <List tab={tab} solo={solo} opera={opera} />
         </div>
     );
 }
 
-function List(props) {}
+function List({ tab, solo, opera }) {
+    console.log("list props", tab, solo, opera);
+    return (
+        <>
+            {tab == 1 ? (
+                <div className={styles.list}>
+                    {solo.map((item) => {
+                        return (
+                            <div key={item.id} className={styles.item}>
+                                <p>{item.title}</p>
+                                <p>{item.composer}</p>
+                                <p>{item.place_year}</p>
+                            </div>
+                        );
+                    })}
+                </div>
+            ) : (
+                <div className={styles.list}>
+                    {opera.map((item) => {
+                        return (
+                            <div key={item.id} className={styles.item}>
+                                <p>{item.title}</p>
+                                <p>{item.composer}</p>
+                                <p>{item.place_year}</p>
+                            </div>
+                        );
+                    })}
+                </div>
+            )}
+        </>
+    );
+}

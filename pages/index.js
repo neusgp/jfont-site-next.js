@@ -21,15 +21,36 @@ export async function getServerSideProps() {
         },
     });
 
+    const soloRepertoire = await prisma.repertori.findMany({
+        where: {
+            genre: "solo",
+        },
+    });
+
+    const operaRepertoire = await prisma.repertori.findMany({
+        where: {
+            genre: "opera",
+        },
+    });
+
     return {
         props: {
             initialEvents: events,
+            soloProgramm: soloRepertoire,
+            operaProgramm: operaRepertoire,
         },
     };
 }
 
-export default function Home({ initialEvents }) {
-    console.log(initialEvents);
+export default function Home({ initialEvents, soloProgramm, operaProgramm }) {
+    console.log(
+        "events:",
+        initialEvents,
+        "solop",
+        soloProgramm,
+        "operap",
+        operaProgramm
+    );
 
     return (
         <>
@@ -41,7 +62,7 @@ export default function Home({ initialEvents }) {
                 <Welcome />
                 <Bio />
                 <Media />
-                <Repertoire />
+                <Repertoire solo={soloProgramm} opera={operaProgramm} />
                 <Agenda props={initialEvents} />
                 <Contact />
                 <Footer />
