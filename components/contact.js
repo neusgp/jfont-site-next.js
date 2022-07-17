@@ -1,17 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import styles from "../styles/contact.module.css";
 
 export default function Contact() {
+    const [submitted, setSubmitted] = useState(false);
+
+    const successfulSub = () => {
+        setSubmitted(true);
+    };
+
     return (
         <div id="contact" className={styles.contact}>
             <h1 className={styles.title}>CONTACT</h1>
             <p className={styles.text}>
                 To get in touch, please fill the formular below:
             </p>
-            {/* <div className="personaldata">
+            {submitted ? (
+                <div>
+                    <p>Your message was successfully submitted. Thanks!</p>
+                </div>
+            ) : (
+                <Formular successfulSub={successfulSub} />
+            )}
 
-            </div> */}
-            <Formular />
             <p className={styles.text}>Or contact me directly:</p>
             <div className={styles.personaldata}>
                 <p className={styles.text}>joafontplans@gmail.com</p>
@@ -21,38 +32,85 @@ export default function Contact() {
     );
 }
 
-function Formular() {
+function Formular(props) {
+    console.log("formular function", props);
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Sending");
+
+        let data = {
+            firstname,
+            lastname,
+            email,
+            message,
+        };
+
+        fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                Accept: "application/json, text/plain, */*",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        }).then((res) => {
+            console.log("Response received");
+            if (res.status === 200) {
+                console.log("Response succeded!");
+                setFirstname("");
+                setLastname("");
+                setEmail("");
+                setMessage("");
+                props.successfulSub();
+            }
+        });
+    };
+
     return (
         <form className={styles.form} /* onSubmit */>
             <input
                 className={styles.input}
-                /* onChange={this.handleChange} */
+                onChange={(e) => {
+                    setFirstname(e.target.value);
+                }}
                 type="text"
                 name="firstname"
                 placeholder="First Name"
             />
             <input
                 className={styles.input}
-                /*  onChange={this.handleChange} */
+                onChange={(e) => {
+                    setLastname(e.target.value);
+                }}
                 type="text"
                 name="lastname"
                 placeholder="Last name"
             />
             <input
                 className={styles.input}
-                /*  onChange={this.handleChange} */
+                onChange={(e) => {
+                    setEmail(e.target.value);
+                }}
                 type="text"
                 name="email"
                 placeholder="E-mail"
             />
             <textarea
                 className={styles.textarea}
-                /*  onChange={this.handleChange} */
+                onChange={(e) => {
+                    setMessage(e.target.value);
+                }}
                 type="text"
                 name="message"
                 placeholder="Your message..."
             />
-            <button className={styles.button}>Send</button>
+            <button className={styles.button} onClick={handleSubmit}>
+                Send
+            </button>
         </form>
     );
 }
