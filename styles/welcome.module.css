@@ -12,6 +12,35 @@
     padding-right: 8%;
 }
 
+.logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 1%;
+    top: 3%;
+}
+
+.hamburger {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 2%;
+    top: 3%;
+    padding: 1%;
+    background: rgba(68, 68, 68, 0.25);
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    transition: transform 0.5s;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+}
+
 .text {
     font-style: italic;
     width: 30%;

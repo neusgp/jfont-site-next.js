@@ -1,25 +1,33 @@
 .navbar {
-    position: absolute;
+    position: fixed;
+    right: 0;
+    transform: translate(100%);
     display: flex;
-    width: 100%;
-    height: auto;
-    font-family: "Nunito", sans-serif;
-
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 30%;
+    height: 100vh;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    background-color: rgb(109, 109, 109);
     color: white;
-}
-.logo {
-    display: flex;
-    width: 40%;
-    margin-left: 0.8rem;
-    margin-top: 0.8rem;
+    z-index: 1;
+    transition: transform 1s;
+    /*  visibility: hidden; */
 }
 
-.social {
+.show {
+    transform: translate(0);
+}
+
+.exit {
+    text-align: right;
+    margin-right: 10%;
+}
+
+/* .social {
     margin-left: 0.8rem;
     padding-top: 1.5%;
-}
+} */
 
 /* .social a {
     margin: 5% 1% 0 2%;
@@ -30,16 +38,13 @@
 } */
 
 .menu {
-    display: flex;
-    align-self: flex-start;
-    justify-self: right;
-    margin-right: 0.8rem;
-    margin-top: 0.8rem;
+    margin-top: 20%;
 }
 
 .link {
     color: white;
     text-decoration: none;
-    margin: 0 0.8rem 0 0.8rem;
-    font-size: 140%;
+    margin: 10% 0 10% 10%;
+    font-size: 200%;
+    display: block;
 }

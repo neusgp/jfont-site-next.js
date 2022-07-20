@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-/* import { useRouter } from "next/router"; */
-import { useEffect } from "react";
+import { useState } from "react";
+
 import { PrismaClient } from "@prisma/client";
 
 import Welcome from "../components/welcome.js";
@@ -43,6 +43,17 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ initialEvents, soloProgramm, operaProgramm }) {
+    const [isActive, setIsActive] = useState(false);
+
+    const openMenu = () => {
+        console.log("hey!");
+        if (isActive) {
+            setIsActive(false);
+            return;
+        }
+        setIsActive(true);
+    };
+
     console.log(
         "events:",
         initialEvents,
@@ -58,8 +69,8 @@ export default function Home({ initialEvents, soloProgramm, operaProgramm }) {
                 <title>JOAQUIM FONT</title>
             </Head>
             <div>
-                <Navbar />
-                <Welcome />
+                <Navbar isActive={isActive} openMenu={openMenu} />
+                <Welcome openMenu={openMenu} />
                 <Bio />
                 <Media />
                 <Repertoire solo={soloProgramm} opera={operaProgramm} />

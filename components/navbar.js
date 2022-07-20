@@ -1,21 +1,15 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import Image from "next/image";
-import styles from "../styles/navbar.module.css";
-import logo from "../public/joaquimfont.png";
+import { useState } from "react";
 
-export default function Navbar() {
+import styles from "../styles/navbar.module.css";
+
+export default function Navbar({ isActive, openMenu }) {
     return (
-        <div className={styles.navbar}>
-            <div className={styles.title}>
-                <Image
-                    className={styles.logo}
-                    src={logo}
-                    width={520}
-                    height={100}
-                />
-                <div className={styles.social} />
-                {/*               <a href="https://www.instagram.com/joaquimfont/">
+        <>
+            <div className={`${styles.navbar} ${isActive ? styles.show : ""}`}>
+                <div className={styles.title}>
+                    <div className={styles.social} />
+                    {/*               <a href="https://www.instagram.com/joaquimfont/">
                     <i className="fa-brands fa-instagram"></i>
                 </a>
 
@@ -26,24 +20,28 @@ export default function Navbar() {
                 <a href="https://www.youtube.com/user/JoaquimFont">
                     <i className="fa-brands fa-youtube"></i>
                 </a> */}
+                </div>
+                <div className={styles.exit} onClick={openMenu}>
+                    <p>x</p>
+                </div>
+                <div className={styles.menu}>
+                    <a href="#bio" className={styles.link}>
+                        Bio
+                    </a>
+
+                    <a href="#repertoire" className={styles.link}>
+                        Repertoire
+                    </a>
+
+                    <a href="#agenda" className={styles.link}>
+                        Agenda
+                    </a>
+
+                    <a href="#contact" className={styles.link}>
+                        Contact
+                    </a>
+                </div>
             </div>
-            <div className={styles.menu}>
-                <a href="#bio" className={styles.link}>
-                    Bio
-                </a>
-
-                <a href="#repertoire" className={styles.link}>
-                    Repertoire
-                </a>
-
-                <a href="#agenda" className={styles.link}>
-                    Agenda
-                </a>
-
-                <a href="#contact" className={styles.link}>
-                    Contact
-                </a>
-            </div>
-        </div>
+        </>
     );
 }
