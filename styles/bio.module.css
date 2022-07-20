@@ -5,13 +5,6 @@
     padding: 6% 0 6% 0;
 }
 
-.title {
-    color: #847f7a;
-    margin-top: 0;
-    font-weight: 100;
-    
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -20,6 +13,14 @@
     line-height: 1.6;
     text-align: justify;
     font-size: 1.2rem;
+    padding: 2%;
+    box-shadow: 0 0 30px rgba(81, 81, 81, 0.1);
+}
+
+.title {
+    color: #847f7a;
+    margin-top: 0;
+    font-weight: 100;
 }
 
 .text {

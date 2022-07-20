@@ -25,19 +25,31 @@ export default function Navbar({ isActive, openMenu }) {
                     <p>x</p>
                 </div>
                 <div className={styles.menu}>
-                    <a href="#bio" className={styles.link}>
+                    <a href="#bio" className={styles.link} onClick={openMenu}>
                         Bio
                     </a>
 
-                    <a href="#repertoire" className={styles.link}>
+                    <a
+                        href="#repertoire"
+                        className={styles.link}
+                        onClick={openMenu}
+                    >
                         Repertoire
                     </a>
 
-                    <a href="#agenda" className={styles.link}>
+                    <a
+                        href="#agenda"
+                        className={styles.link}
+                        onClick={openMenu}
+                    >
                         Agenda
                     </a>
 
-                    <a href="#contact" className={styles.link}>
+                    <a
+                        href="#contact"
+                        className={styles.link}
+                        onClick={openMenu}
+                    >
                         Contact
                     </a>
                 </div>

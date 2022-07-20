@@ -49,6 +49,28 @@ export default function Media() {
                     autoPlay={true}
                 />
             </div>
+            <div className={styles.video}>
+                <iframe
+                    className={styles.iframe}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Yvc6iCK7tWg"
+                    title="YouTube video player"
+                    frameboarder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+                <iframe
+                    className={styles.iframe}
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/NPkyILdbZl8"
+                    title="YouTube video player"
+                    frameboarder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            </div>
         </div>
     );
 }
