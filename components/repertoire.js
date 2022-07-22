@@ -44,9 +44,14 @@ function List({ tab, solo, opera }) {
                     {solo.map((item) => {
                         return (
                             <div key={item.id} className={styles.item}>
-                                <p>{item.title}</p>
-                                <p>{item.composer}</p>
-                                <p>{item.place_year}</p>
+                                <p className={styles.composer}>
+                                    {item.composer}
+                                </p>
+                                <p className={styles.worktitle}>{item.title}</p>
+
+                                <p className={styles.place_year}>
+                                    {item.place_year}
+                                </p>
                             </div>
                         );
                     })}
@@ -56,9 +61,14 @@ function List({ tab, solo, opera }) {
                     {opera.map((item) => {
                         return (
                             <div key={item.id} className={styles.item}>
-                                <p>{item.title}</p>
-                                <p>{item.composer}</p>
-                                <p>{item.place_year}</p>
+                                <p className={styles.composer}>
+                                    {item.composer}
+                                </p>
+                                <p className={styles.worktitle}>{item.title}</p>
+
+                                <p className={styles.place_year}>
+                                    {item.place_year}
+                                </p>
                             </div>
                         );
                     })}

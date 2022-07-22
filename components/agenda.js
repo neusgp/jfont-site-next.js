@@ -35,7 +35,7 @@ function NextEvents({ props }) {
                 return (
                     <div key={event.id} className={styles.event}>
                         <div className={styles.datetime}>
-                            <p className={styles.p}>{event.start}</p>
+                            <p className={styles.p}>{event.date}</p>
                             <p className={styles.p}>{event.time}h</p>
                         </div>
                         <div className={styles.info}>

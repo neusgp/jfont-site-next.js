@@ -1,26 +1,25 @@
 .media {
-    height: auto;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 110vh;
     justify-content: center;
-    padding-bottom: 5%;
 }
 
 .gallery {
     width: 40%;
-
+    height: 50%;
     z-index: 0;
     margin-bottom: 5%;
+    margin-right: 5%;
 }
 
 .video {
-    width: 100%;
+    width: 35%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .iframe {
-    margin: 0 2% 0 2%;
+    margin: 0 2% 2% 2%;
 }
