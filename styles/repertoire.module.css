@@ -36,8 +36,8 @@
 }
 
 .list {
-    background: #4e7287;
-   /*  border-radius: 8px; */
+    background: white;
+    /*  border-radius: 8px; */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
@@ -54,8 +54,14 @@
 }
 
 .item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 0 0 2% 0;
     width: 20%;
+    min-height: 36%;
+    color: black;
+    border-bottom: 1px solid #94b1ab;
 }
 
 .composer {
