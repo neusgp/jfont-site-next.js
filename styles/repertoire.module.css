@@ -1,18 +1,16 @@
 .repertoire {
-    /* height: 50%; */
-    /*    background-image: url("../public/repertoire.jpg");
-    height: 50rem; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;  */
-    background-color: #94b1ab;
+    background: rgba(249, 186, 129, 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(249, 186, 129, 0.3);
     height: 100vh;
     font-family: "Nunito", sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 2% 10% 2% 10%;
+    padding: 2% 12% 2% 12%;
 }
 
 .title {
@@ -51,6 +49,7 @@
     align-self: center;
     margin-top: 5%;
     padding: 2%;
+    z-index: 0;
 }
 
 .item {

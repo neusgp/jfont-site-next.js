@@ -9,18 +9,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 100%;
     line-height: 1.6;
-    background-color: #94b1ab;
-
+    background: rgba(159, 214, 249, 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(159, 214, 249, 0.3);
+    z-index: -1;
     font-size: 1.1rem;
     padding: 2% 2% 4% 2%;
-
-    box-shadow: 10px 20px 30px rgb(216, 216, 216);
 }
 
 .title {
     color: white;
+
     margin-top: 0;
     font-weight: 100;
     align-self: flex-start;

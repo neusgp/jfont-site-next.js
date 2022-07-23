@@ -1,11 +1,16 @@
 .contact {
     font-family: "Nunito", sans-serif;
-    background: #4e7287;
+    background: rgba(159, 214, 249, 1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(159, 214, 249, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5%;
     color: white;
+    z-index: -1;
 }
 
 .title {
@@ -60,6 +65,7 @@
 .text {
     margin-top: 0;
     margin-bottom: 0;
+    color: black;
 }
 
 .personaldata {
