@@ -1,11 +1,14 @@
 .repertoire {
+    background-image: url("../public/repertoire.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
     height: 100vh;
     font-family: "Nunito", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 3% 12% 2% 12%;
-    background-color: #edf9ff;
+    padding: 3% 12% 4% 12%;
+    color: white;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -24,7 +27,6 @@
     margin: 0 0 0 10%;
     font-size: 1.3rem;
     padding: 3% 5% 3% 5%;
-    border-radius: 5px;
 }
 
 .tabs p:hover {
@@ -34,12 +36,13 @@
 
 .selected {
     font-weight: bold;
-    background-color: white;
+    background: rgb(255, 255, 255, 0.98);
+    color: black;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .list {
-    background: white;
+    background: rgb(255, 255, 255, 0.98);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
