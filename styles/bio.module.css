@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     font-family: "Nunito", sans-serif;
-    padding: 6% 0 6% 0;
+    padding: 3% 0 3% 0;
 }
 
 .content {
@@ -11,19 +11,13 @@
     align-items: center;
     width: 100%;
     line-height: 1.6;
-    background: rgba(159, 214, 249, 1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(159, 214, 249, 0.3);
+
     z-index: -1;
     font-size: 1.1rem;
     padding: 2% 2% 4% 2%;
 }
 
 .title {
-    color: white;
-
     margin-top: 0;
     font-weight: 100;
     align-self: flex-start;
@@ -37,4 +31,9 @@
 
 .biotext {
     margin-bottom: 0;
+    background-color: white;
+    padding: 3%;
+    /* box-shadow: 10px 10px 5px; */
+    border: 1px solid black;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
