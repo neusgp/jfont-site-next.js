@@ -4,7 +4,7 @@ import styles from "../styles/repertoire.module.css";
 
 export default function Repertoire({ solo, opera }) {
     console.log("repertoire props", solo, opera);
-    const [tab, setTab] = useState();
+    const [tab, setTab] = useState(1);
 
     const changeTab = (e) => {
         console.log(e.target.id);
@@ -21,11 +21,18 @@ export default function Repertoire({ solo, opera }) {
         <div id="repertoire" className={styles.repertoire}>
             <h1 className={styles.title}>Repertoire</h1>
             <div className={styles.tabs}>
-                <p id="1" onClick={changeTab}>
+                <p
+                    id="1"
+                    onClick={changeTab}
+                    className={tab === 1 && styles.selected}
+                >
                     SOLOIST
                 </p>
-                <p>|</p>
-                <p id="2" onClick={changeTab}>
+                <p
+                    id="2"
+                    onClick={changeTab}
+                    className={tab === 2 && styles.selected}
+                >
                     OPERA
                 </p>
                 {/* <p onClick="">CHAMBER MUSIC</p> */}

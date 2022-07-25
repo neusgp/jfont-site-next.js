@@ -15,17 +15,27 @@
 
 .repertoire .tabs {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     width: 20%;
+    margin-top: 2%;
 }
 
 .tabs p {
-    margin: 0 5px 0 5px;
+    margin: 0 0 0 10%;
     font-size: 1.3rem;
+    padding: 3% 5% 3% 5%;
+    border-radius: 5px;
 }
 
 .tabs p:hover {
     cursor: pointer;
+    font-weight: bold;
+}
+
+.selected {
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .list {
