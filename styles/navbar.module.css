@@ -25,9 +25,14 @@
 }
 
 .exit {
+    align-self: flex-end;
     text-align: right;
     margin-right: 7%;
     margin-top: 5%;
+}
+
+.exit:hover {
+    cursor: pointer;
 }
 
 /* .social {

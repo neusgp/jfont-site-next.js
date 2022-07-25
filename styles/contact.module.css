@@ -25,7 +25,7 @@
     outline: none;
     box-shadow: none;
     font-size: 100%;
-    border: 1px solid black;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .textarea {
@@ -38,11 +38,9 @@
     border: none;
     overflow: auto;
     outline: none;
-    border: 1px solid black;
-
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 
     resize: none; /*remove the resize handle on the bottom right*/
 }
@@ -50,9 +48,19 @@
 .button {
     font-family: "Nunito", sans-serif;
     font-size: 1.2em;
-    width: 30%;
-    height: 15%;
-    margin-top: 2%;
+    margin-top: 4%;
+    color: rgb(33, 120, 201);
+    border: 1px solid rgb(33, 120, 201);
+    font-weight: bold;
+    background-color: white;
+    padding: 3% 8% 3% 8%;
+    border-radius: 30px;
+    transition: transform 0.5s;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .text {
@@ -67,4 +75,18 @@
     flex-direction: column;
     align-items: center;
     line-height: 1.6;
+}
+
+.thanks {
+    color: green;
+    background-color: white;
+    padding: 0 2% 0 2%;
+    border-radius: 20px;
+    border: 1px solid green;
+    margin: 3% 0 3% 0;
+    font-weight: bold;
+}
+
+.error {
+    color: rgb(255, 108, 108);
 }

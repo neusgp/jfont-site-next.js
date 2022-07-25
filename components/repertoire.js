@@ -19,7 +19,7 @@ export default function Repertoire({ solo, opera }) {
 
     return (
         <div id="repertoire" className={styles.repertoire}>
-            <h1 className={styles.title}>REPERTOIRE</h1>
+            <h1 className={styles.title}>Repertoire</h1>
             <div className={styles.tabs}>
                 <p id="1" onClick={changeTab}>
                     SOLOIST

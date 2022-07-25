@@ -11,12 +11,12 @@ export default function Contact() {
 
     return (
         <div id="contact" className={styles.contact}>
-            <h1 className={styles.title}>CONTACT</h1>
+            <h1 className={styles.title}>Contact</h1>
             <p className={styles.text}>
                 To get in touch, please fill the formular below:
             </p>
             {submitted ? (
-                <div>
+                <div className={styles.thanks}>
                     <p>Your message was successfully submitted. Thanks!</p>
                 </div>
             ) : (
@@ -38,10 +38,17 @@ function Formular(props) {
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [error, setError] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Sending");
+
+        if (!firstname || !lastname || !email || !message) {
+            setError(true);
+            return;
+        }
+        setError(false);
 
         let data = {
             firstname,
@@ -70,6 +77,8 @@ function Formular(props) {
         });
     };
 
+    console.log("error", error);
+
     return (
         <form className={styles.form} /* onSubmit */>
             <input
@@ -79,6 +88,7 @@ function Formular(props) {
                 }}
                 type="text"
                 name="firstname"
+                required="true"
                 placeholder="First Name"
             />
             <input
@@ -88,6 +98,7 @@ function Formular(props) {
                 }}
                 type="text"
                 name="lastname"
+                required="true"
                 placeholder="Last name"
             />
             <input
@@ -97,6 +108,7 @@ function Formular(props) {
                 }}
                 type="text"
                 name="email"
+                required="true"
                 placeholder="E-mail"
             />
             <textarea
@@ -105,9 +117,15 @@ function Formular(props) {
                     setMessage(e.target.value);
                 }}
                 type="text"
+                required="true"
                 name="message"
                 placeholder="Your message..."
             />
+            {error && (
+                <div className={styles.error}>
+                    <p>Please, make sure to fill all the fields.</p>
+                </div>
+            )}
             <button className={styles.button} onClick={handleSubmit}>
                 Send
             </button>

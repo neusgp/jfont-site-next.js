@@ -6,7 +6,7 @@ export default function Bio() {
         <div className={styles.bio}>
             <div id="bio" className={styles.content}>
                 <div className={styles.text}>
-                    <h1 className={styles.title}>BIO</h1>
+                    <h1 className={styles.title}>Biography</h1>
                     <p className={styles.biotext}>
                         <b>Joaquim Font (Igualada, 1995)</b> es forma en els
                         seus inicis al conservatori dIgualada. Posteriorment,

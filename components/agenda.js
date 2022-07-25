@@ -11,7 +11,7 @@ export default function Agenda({ props }) {
 
     return (
         <div id="agenda" className={styles.agenda}>
-            <h1 className={styles.title}>AGENDA</h1>
+            <h1 className={styles.title}>Agenda</h1>
             <div className={styles.events}>
                 <NextEvents props={props} />
                 <div className={styles.calendar}>

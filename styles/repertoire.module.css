@@ -30,7 +30,6 @@
 
 .list {
     background: white;
-    border: 1px solid black;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
@@ -53,9 +52,11 @@
     flex-wrap: wrap;
     margin: 0 0 2% 0;
     width: 20%;
+    height: 40%;
     min-height: 36%;
     color: black;
-    border-bottom: 1px solid #94b1ab;
+    padding: 0 1% 0 1%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .composer {
