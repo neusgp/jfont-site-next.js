@@ -58,10 +58,10 @@ export default function Welcome({ openMenu }) {
             </div>
 
             <div className={styles.welcome}>
-                <p className={styles.text}>
+                {/* <p className={styles.text}>
                     In this world there are a lot of good pianists and Joaquim
                     Font is one of them
-                </p>
+                </p> */}
             </div>
         </>
     );

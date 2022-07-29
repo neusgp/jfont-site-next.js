@@ -88,7 +88,6 @@ function Formular(props) {
                 }}
                 type="text"
                 name="firstname"
-                required="true"
                 placeholder="First Name"
             />
             <input
@@ -98,7 +97,6 @@ function Formular(props) {
                 }}
                 type="text"
                 name="lastname"
-                required="true"
                 placeholder="Last name"
             />
             <input
@@ -108,7 +106,6 @@ function Formular(props) {
                 }}
                 type="text"
                 name="email"
-                required="true"
                 placeholder="E-mail"
             />
             <textarea
@@ -117,7 +114,6 @@ function Formular(props) {
                     setMessage(e.target.value);
                 }}
                 type="text"
-                required="true"
                 name="message"
                 placeholder="Your message..."
             />

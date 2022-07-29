@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../styles/repertoire.module.css";
 
 export default function Repertoire({ solo, opera }) {
