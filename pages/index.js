@@ -46,7 +46,6 @@ export default function Home({ initialEvents, soloProgramm, operaProgramm }) {
     const [isActive, setIsActive] = useState(false);
 
     const openMenu = () => {
-        console.log("hey!");
         if (isActive) {
             setIsActive(false);
             return;

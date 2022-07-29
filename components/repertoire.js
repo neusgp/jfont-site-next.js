@@ -24,14 +24,14 @@ export default function Repertoire({ solo, opera }) {
                 <p
                     id="1"
                     onClick={changeTab}
-                    className={tab === 1 && styles.selected}
+                    className={tab === 1 ? styles.selected : undefined}
                 >
                     SOLOIST
                 </p>
                 <p
                     id="2"
                     onClick={changeTab}
-                    className={tab === 2 && styles.selected}
+                    className={tab === 2 ? styles.selected : undefined}
                 >
                     OPERA
                 </p>
@@ -46,7 +46,7 @@ function List({ tab, solo, opera }) {
     console.log("list props", tab, solo, opera);
     return (
         <>
-            {tab == 1 ? (
+            {tab === 1 ? (
                 <div className={styles.list}>
                     {solo.map((item) => {
                         return (

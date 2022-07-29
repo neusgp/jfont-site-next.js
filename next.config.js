@@ -13,4 +13,6 @@ const nextConfig = {
     swcMinify: true,
 };
 
-module.exports = withTM({ nextConfig });
+/* module.exports = withTM({ nextConfig }); */
+
+module.exports = nextConfig;
