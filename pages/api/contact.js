@@ -1,5 +1,5 @@
 import AWS from "aws-sdk";
-import secrets from "../../secrets";
+import secrets from "../../secrets.json";
 
 const ses = new AWS.SES({
     accessKeyId: secrets.AWS_KEY,
