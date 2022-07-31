@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { useState } from "react";
 
-import { PrismaClient } from "@prisma/client";
+import prisma from "../lib/prisma.ts";
 
 import Welcome from "../components/welcome.js";
 import Bio from "../components/bio.js";
@@ -14,7 +14,6 @@ import Footer from "../components/footer.js";
 import Contact from "../components/contact.js";
 
 export async function getServerSideProps() {
-    const prisma = new PrismaClient();
     const events = await prisma.agenda.findMany({
         orderBy: {
             date: "desc",

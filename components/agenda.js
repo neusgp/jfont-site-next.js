@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-/* import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid"; */
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
 
 import styles from "../styles/agenda.module.css";
 
@@ -15,11 +15,11 @@ export default function Agenda({ props }) {
             <div className={styles.events}>
                 <NextEvents props={props} />
                 <div className={styles.calendar}>
-                    {/*  <FullCalendar
+                     <FullCalendar
                         events={props}
                         plugins={[dayGridPlugin]}
                         initialView="dayGridMonth"
-                    /> */}
+                    />
                 </div>
             </div>
         </div>
