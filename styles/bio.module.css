@@ -37,3 +37,15 @@
 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
+
+@media only screen and (max-width: 768px) {
+    .bio {
+        padding-top: 5%;
+    }
+    .text {
+        width: 80%;
+    }
+    .biotext {
+        font-size: 90%;
+    }
+}

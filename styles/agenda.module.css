@@ -69,3 +69,30 @@
 .p {
     margin: 2% 0 2% 0;
 }
+
+@media only screen and (max-width: 768px) {
+    .agenda {
+        height: auto;
+        padding-bottom: 12%;
+    }
+    .events {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .nextevents {
+        width: 98%;
+    }
+    .datetime {
+        font-size: 80%;
+    }
+    .info {
+        width: 60%;
+        font-size: 80%;
+    }
+    .calendar {
+        margin-top: 18%;
+        width: 100%;
+        font-size: 60%;
+    }
+}
