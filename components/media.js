@@ -12,8 +12,8 @@ export default function Media() {
                     <div className={styles.video_des}>
                         <p>
                             Joaquim plays a solo piano program featuring some
-                            great works like <b>Corpus Chrisi en Sevilla</b> (I.
-                            Albéniz).
+                            great works like <b>Corpus Christi en Sevilla</b>{" "}
+                            (I. Albéniz).
                         </p>
                     </div>
                     <iframe
@@ -41,7 +41,7 @@ export default function Media() {
                     <div className={styles.video_des}>
                         <p>
                             A couple of thoughts about the venezuelan composer
-                            <b> Modesta Bor</b> and her Songs.
+                            <b> Modesta Bor</b> and her songs.
                         </p>
                     </div>
                 </div>

@@ -18,11 +18,15 @@ export default function Welcome({ openMenu }) {
 
     return (
         <>
-            <div className={styles.hamburger} onClick={openMenu}>
-                <Image src={hamburger} width={50} height={45} />
+            <div className={styles.hamburger_container} onClick={openMenu}>
+                <div className={styles.hamburger}>
+                    <Image src={hamburger} layout="fill" />
+                </div>
             </div>
             <div className={styles.logo}>
-                <Image src={logo} width={516} height={90} />
+                <div className={styles.logo_container}>
+                    <Image src={logo} layout="fill" />
+                </div>
                 <div className={styles.social}>
                     <a
                         href="https://www.instagram.com/joaquimfont/"

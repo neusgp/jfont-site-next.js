@@ -3,6 +3,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -12,6 +13,8 @@ h1 {
 }
 
 body {
+    position: relative;
     margin: 0;
     font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
 }

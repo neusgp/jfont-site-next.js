@@ -25,8 +25,11 @@
 }
 
 .exit {
+    position: relative;
     align-self: flex-end;
     text-align: right;
+    width: 15%;
+    height: 10%;
     margin-right: 7%;
     margin-top: 5%;
 }
@@ -42,7 +45,7 @@
 .link {
     color: white;
     text-decoration: none;
-    margin: 10% 0 10% 10%;
+    margin: 0 0 16% 10%;
     font-size: 200%;
     display: block;
 }
