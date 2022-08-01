@@ -1,7 +1,8 @@
 # Artist Website
 
-![Design ohne Titel (4)](https://user-images.githubusercontent.com/96746116/182110206-8ca8374b-90ab-49cd-a0ed-b1e335e397f0.png)
 
+
+![Design ohne Titel (5)](https://user-images.githubusercontent.com/96746116/182116490-1278d4fa-b0dc-4240-8511-60022ba45dc3.png)
 
 
 ## About
