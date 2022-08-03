@@ -14,7 +14,7 @@ Joaquim and I first met back in 2014, when I was living in the sunny and beautif
 
 ## Things that I learned and worked on in the process
 
-:seedling: This was my first time using Next.js and I really like it because (in my beginner opinion) its a super fast and easy way to build api rutes and, in may case, comunicate with the database.
+:seedling: This was my first time using Next.js and I really like it because its a super fast and easy way to build api rutes and, in my case, comunicate with the database.
 :seedling: I discovered prisma, and I am really looking forward to keep learning about it in future projects. I love the fact that you can open and edit a db visualization on the browser (prisma studio).
 :seedling: I got to know Vercel and learned a bit more about deploying full-stack applications in general.
 
