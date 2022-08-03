@@ -16,7 +16,7 @@
     font-size: 2.5rem;
 }
 
-.repertoire .tabs {
+.tabs {
     display: flex;
     justify-content: flex-end;
     width: 20%;
@@ -85,10 +85,10 @@
 
 @media only screen and (max-width: 768px) {
     .repertoire {
-        padding-right: 18%;
         padding-bottom: 0;
         height: auto;
         padding-bottom: 16%;
+        align-items: flex-start;
     }
     .list {
         margin-top: 10%;
@@ -99,7 +99,12 @@
         padding: 5%;
         margin: 0;
     }
+    .tabs {
+        margin: 0;
+        justify-content: flex-start;
+    }
     .tabs p {
-        margin: 0 0 0 30%;
+        margin: 0 30% 0 0;
+        padding: 0.4em;
     }
 }
